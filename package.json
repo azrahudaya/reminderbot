@@ -1,7 +1,9 @@
 {
   "name": "pii-whatsapp-bot",
   "version": "0.1.0",
-  "description": "Multi-user WhatsApp task bot with VN transcription and reminders",
+  "description": "Multi-user WhatsApp task bot with voice transcription and reminders",
+  "author": "Azra Hudaya",
+  "license": "SEE LICENSE IN LICENSE.md",
   "main": "src/index.js",
   "type": "module",
   "scripts": {
