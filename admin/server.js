@@ -6,6 +6,7 @@ import { fileURLToPath } from 'url';
 import express from 'express';
 import dayjs from 'dayjs';
 import archiver from 'archiver';
+import { config } from '../src/config.js';
 import db, {
   getResearchLog,
   updateResearchLog,
@@ -20,8 +21,7 @@ import { calculateExtractionMetrics, calculateWer, parseJsonList, validateGround
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const rootDir = path.resolve(__dirname, '..');
-const audioDir = path.join(rootDir, 'data', 'audio');
-const dataDir = path.join(rootDir, 'data');
+const audioDir = config.researchAudioDir;
 const envPath = path.join(rootDir, '.env');
 const env = { ...loadEnv(envPath), ...process.env };
 const assetVersion = getAssetVersion();
@@ -667,7 +667,7 @@ function getRespondentSummary() {
 function getBackupStats() {
   const audio = getResearchAudioStats();
   return {
-    dbPath: path.join(dataDir, 'tasks.db'),
+    dbPath: config.dbPath,
     audioCount: audio.count,
     audioBytes: audio.bytes,
     respondentCount: db.prepare('SELECT COUNT(*) AS total FROM research_respondents').get().total || 0,

@@ -14,6 +14,9 @@ data/*.db
 data/*.db-shm
 data/*.db-wal
 data/audio/
+data/transcripts/
+data/exports/
+data/backup*/
 
 # Local notes and backups
 prompt.txt

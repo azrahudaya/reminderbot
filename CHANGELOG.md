@@ -4,8 +4,9 @@ All notable changes to this project are documented here.
 
 ## [unreleased]
 
-- Continue privacy and security review before any real-user deployment.
-- Improve operational documentation for local-only research data handling.
+- Documented the academic prototype boundary and local research-data handling.
+- Added a security reporting policy and broader ignore rules for sensitive artifacts.
+- Updated production guidance to require an explicit security and privacy review.
 
 ## [0.1.0] - 2026-08-30
 
